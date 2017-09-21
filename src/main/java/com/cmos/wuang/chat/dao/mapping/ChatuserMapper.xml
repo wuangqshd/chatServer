@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.ChatuserMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.Chatuser" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="CHAR" />
+    <result column="chatNum" property="chatnum" jdbcType="CHAR" />
+    <result column="userId" property="userid" jdbcType="CHAR" />
+    <result column="userName" property="username" jdbcType="VARCHAR" />
+    <result column="userPasswd" property="userpasswd" jdbcType="VARCHAR" />
+    <result column="userAge" property="userage" jdbcType="INTEGER" />
+    <result column="userSex" property="usersex" jdbcType="CHAR" />
+    <result column="userAddress" property="useraddress" jdbcType="VARCHAR" />
+    <result column="userPhone" property="userphone" jdbcType="VARCHAR" />
+    <result column="userPic" property="userpic" jdbcType="VARCHAR" />
+    <result column="userHome" property="userhome" jdbcType="VARCHAR" />
+    <result column="userContext" property="usercontext" jdbcType="VARCHAR" />
+    <result column="isOnline" property="isonline" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, chatNum, userId, userName, userPasswd, userAge, userSex, userAddress, userPhone, 
+    userPic, userHome, userContext, isOnline
+  </sql>
+</mapper>

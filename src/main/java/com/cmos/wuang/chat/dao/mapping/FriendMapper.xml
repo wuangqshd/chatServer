@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.FriendMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.Friend" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="chatNum" property="chatnum" jdbcType="VARCHAR" />
+    <result column="friendNum" property="friendnum" jdbcType="VARCHAR" />
+    <result column="groupId" property="groupid" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="isLink" property="islink" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, chatNum, friendNum, groupId, createTime, isLink
+  </sql>
+</mapper>

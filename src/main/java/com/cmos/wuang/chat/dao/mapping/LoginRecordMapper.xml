@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.LoginRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.LoginRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="chatNum" property="chatnum" jdbcType="VARCHAR" />
+    <result column="loginIp" property="loginip" jdbcType="VARCHAR" />
+    <result column="loginPort" property="loginport" jdbcType="VARCHAR" />
+    <result column="loginTime" property="logintime" jdbcType="VARCHAR" />
+    <result column="isOnline" property="isonline" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, chatNum, loginIp, loginPort, loginTime, isOnline
+  </sql>
+</mapper>

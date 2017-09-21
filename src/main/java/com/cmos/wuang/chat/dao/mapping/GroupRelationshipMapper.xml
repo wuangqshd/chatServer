@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.GroupRelationshipMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.GroupRelationship" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="groupId" property="groupid" jdbcType="VARCHAR" />
+    <result column="chatNum" property="chatnum" jdbcType="VARCHAR" />
+    <result column="addTime" property="addtime" jdbcType="VARCHAR" />
+    <result column="groupViewName" property="groupviewname" jdbcType="VARCHAR" />
+    <result column="isNoSay" property="isnosay" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, groupId, chatNum, addTime, groupViewName, isNoSay
+  </sql>
+</mapper>

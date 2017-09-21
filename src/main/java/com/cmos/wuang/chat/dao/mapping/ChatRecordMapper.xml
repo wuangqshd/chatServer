@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.ChatRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.ChatRecord" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="sendNum" property="sendnum" jdbcType="VARCHAR" />
+    <result column="getNum" property="getnum" jdbcType="VARCHAR" />
+    <result column="sendTime" property="sendtime" jdbcType="VARCHAR" />
+    <result column="msgId" property="msgid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, sendNum, getNum, sendTime, msgId
+  </sql>
+</mapper>

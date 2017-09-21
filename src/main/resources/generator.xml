@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<!--数据库驱动 -->
+	<!-- <classPathEntry location="mysql-connector-java-5.1.6-bin.jar"/> -->
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+			<!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+			<property name="caseSensitive" value="true"/>
+		</plugin>
+<!-- 		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator> -->
+		<!--数据库链接地址账号密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/chat" userId="root"
+			password="1234">
+		</jdbcConnection>
+	<!-- 	<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver> -->
+		<!--生成Model类存放位置 -->
+		<javaModelGenerator targetPackage="com.cmos.wuang.chat.dao.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<!--生成映射文件存放位置 -->
+		<sqlMapGenerator targetPackage="com.cmos.wuang.chat.dao.mapping"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<!--生成Dao类存放位置 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.cmos.wuang.chat.dao.mapper" 
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<!--生成对应表及类名 -->
+		<table tableName="chatContext" domainObjectName="ChatContext"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="chatRecord" domainObjectName="ChatRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="chatuser" domainObjectName="Chatuser"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="friend" domainObjectName="Friend"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="group" domainObjectName="Group"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="grouping" domainObjectName="Grouping"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="groupRelationship" domainObjectName="GroupRelationship"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+		<table tableName="loginRecord" domainObjectName="LoginRecord"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false"></table>
+	</context>
+</generatorConfiguration>

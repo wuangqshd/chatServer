@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cmos.wuang.chat.dao.mapper.GroupMapper" >
+  <resultMap id="BaseResultMap" type="com.cmos.wuang.chat.dao.model.Group" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" property="id" jdbcType="VARCHAR" />
+    <result column="groupNum" property="groupnum" jdbcType="VARCHAR" />
+    <result column="createNum" property="createnum" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="VARCHAR" />
+    <result column="groupName" property="groupname" jdbcType="VARCHAR" />
+    <result column="groupPic" property="grouppic" jdbcType="VARCHAR" />
+    <result column="groupContext" property="groupcontext" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, groupNum, createNum, createTime, groupName, groupPic, groupContext
+  </sql>
+</mapper>
