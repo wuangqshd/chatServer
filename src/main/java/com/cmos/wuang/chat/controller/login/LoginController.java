@@ -30,9 +30,17 @@ public class LoginController {
 		model.addAttribute("user", string);
 		return "index";
 	}
-	@RequestMapping("/index")
+	
+	@RequestMapping("/userinfo")
 	@ResponseBody
-	public String index(HttpServletRequest request,HttpServletResponse response) {
-		return "Hello World!";
+	public Chatuser getUser(HttpServletRequest request,HttpServletResponse response) {
+		String session = request.getParameter("loginid");
+		if (chatuserService.findOne(session).equals(null)) {
+			
+		}
+		System.out.println("输出json");
+		Chatuser user = new Chatuser();
+		user = chatuserService.findOne("fdasdasdffasdf");
+		return user;
 	}
 }
