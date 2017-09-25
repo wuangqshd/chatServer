@@ -20,6 +20,5 @@ public class GroupRelationshipTest {
 			GroupRelationship t = new GroupRelationship();
 			List<GroupRelationship> list = service.findGroupRelationship(t,1,10);
 			System.out.println(list.size());
-			t = service.findOne("1");
 		}
 }

@@ -20,6 +20,5 @@ public class GroupingTest {
 			Grouping t = new Grouping();
 			List<Grouping> list = service.findGrouping(t,1,10);
 			System.out.println(list.size());
-			t = service.findOne("1");
 		}
 }

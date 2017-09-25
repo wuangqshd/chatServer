@@ -20,6 +20,5 @@ public class FriendTest {
 			Friend t = new Friend();
 			List<Friend> list = service.findFriend(t,1,10);
 			System.out.println(list.size());
-			t = service.findOne("1");
 		}
 }

@@ -20,6 +20,5 @@ public class ChatRecordTest {
 			ChatRecord t = new ChatRecord();
 			List<ChatRecord> list = service.findChatRecord(t,1,10);
 			System.out.println(list.size());
-			t = service.findOne("1");
 		}
 }

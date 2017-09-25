@@ -24,7 +24,6 @@ public class ChatuserTest {
 //			System.out.println(list.size());
 //			t = service.findOne("1");
 			t.setId(UUID.randomUUID().toString());
-			t.setUsername("ÀîËÄ");
 			t.setChatnum("000002");
 			System.out.println(service.insertOne(t));
 		}

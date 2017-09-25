@@ -8,5 +8,6 @@
 </head>
 <body>
 	<a href="login.do">Login!</a>
+	<h1>你好</h1>
 </body>
 </html>

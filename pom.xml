@@ -94,7 +94,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.43</version>
+			<version>5.1.27</version>
 		</dependency>
 		<!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
 		<dependency>
@@ -107,6 +107,12 @@
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
+		</dependency>
+		 <!--  此Listener解决自动部署中的内存泄露问题 -->
+		<dependency>
+		    <groupId>se.jiderhamn.classloader-leak-prevention</groupId>
+		    <artifactId>classloader-leak-prevention-servlet</artifactId>
+		    <version>2.1.0</version>
 		</dependency>
 		<!-- 日志文件管理包 -->
 		<!-- log start -->
@@ -247,6 +253,21 @@
                 <target>1.8</target>
             </configuration>
     	</plugin>
-  	</plugins>
-  </build>
+    	
+           <plugin>  
+                <groupId>org.apache.tomcat.maven</groupId>
+			    <artifactId>tomcat7-maven-plugin</artifactId>
+			    <version>2.2</version>
+			    <configuration>
+			        <!-- <url>http://localhost:8080/manager/text</url> -->
+			      	<!--   公网环境 -->
+			        <url>http://47.93.3.248:8081/manager/text</url>
+			        <username>admin</username>
+			        <password>admin</password>
+			        <update>true</update>
+			        <path>/chatservice</path>
+			    </configuration>
+           </plugin>  
+       </plugins>  
+   </build>  
 </project>
